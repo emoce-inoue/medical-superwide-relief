@@ -1,0 +1,108 @@
+.c-cta {
+  z-index: var(--menu-z-index);
+  position: relative;
+  padding-block: calc(13 / var(--layout-width-sp) * 100%) calc(23 / var(--layout-width-sp) * 100%);
+  background-color: var(--background-cta);
+}
+
+.c-cta--sticky {
+  position: fixed;
+  inset-block-end: 0;
+  inset-inline-start: 50%;
+  inline-size: 100%;
+  translate: -50% 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    translate 0.3s ease;
+}
+
+.c-cta-sp--fixed {
+  translate: -50%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.c-cta__heading {
+  font-weight: var(--font-bold);
+  font-size: calc(15 * var(--rem-ratio));
+  color: var(--color-blue);
+  text-align: center;
+  letter-spacing: var(--tracking-medium);
+}
+
+.c-cta__button {
+  --aspect-cta-button: 673/131;
+
+  position: relative;
+  display: block;
+  inline-size: calc(673 / var(--layout-width-sp) * 100%);
+  aspect-ratio: var(--aspect-cta-button);
+  margin: calc(15 / var(--layout-width-sp) * 100%) auto 0;
+  background-color: var(--color-blue);
+  border-radius: var(--rounded-62);
+  box-shadow: var(--shadow-cta);
+}
+
+.c-cta__button-outer {
+  block-size: 100%;
+  border-radius: var(--rounded-62);
+  box-shadow: var(--shadow-cta-left-inset);
+}
+
+.c-cta__button-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 100%;
+  border-radius: var(--rounded-62);
+  box-shadow: var(--shadow-cta-right-inset);
+}
+
+.c-cta__button-text {
+  font-weight: var(--font-semibold);
+  font-size: calc(40 / var(--layout-width-sp) * 100vw);
+  color: var(--font-white);
+  letter-spacing: var(--tracking-relaxed);
+}
+
+.c-cta__button-text-small {
+  font-size: calc(33 / var(--layout-width-sp) * 100vw);
+}
+
+.c-cta__button-arrow {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: calc((54 / 673) * 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: calc((24 / 673) * 100%);
+  translate: 0 -50%;
+}
+
+@media screen and (min-width: 768px) {
+  .c-cta__heading {
+    font-size: min(calc(24 / var(--layout-width-max) * 100vw), calc(24 * var(--rem-ratio)));
+  }
+
+  .c-cta__button {
+    transition: opacity 0.3s ease;
+  }
+
+  .c-cta__button-text-small {
+    font-size: min(calc(26 / var(--layout-width-max) * 100vw), calc(26 * (var(--rem-ratio))));
+  }
+
+  .c-cta__button-text {
+    font-size: min(calc(32 / var(--layout-width-max) * 100vw), calc(32 * var(--rem-ratio)));
+  }
+}
+
+@media (any-hover: hover) {
+  .c-cta__button:hover {
+    opacity: 0.6;
+  }
+}

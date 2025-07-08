@@ -1,59 +1,44 @@
-.js-fade,
-.js-fadeup,
-.js-fadein {
+.js-scrollin {
   opacity: 0;
+  translate: 0 12px;
 }
 
-.js-fade.is-inview {
-  animation: fade 1s linear forwards;
+.js-scrollin.is-inview {
+  opacity: 1;
+  translate: 0;
+  transition:
+    opacity 0.4s ease,
+    translate 0.4s ease;
 }
 
-.js-fadeup.is-inview {
-  animation: fadeup 1s ease-out forwards;
+.l-bg {
+  animation: floating 2s ease-in-out infinite alternate-reverse;
 }
 
-.js-fadein.is-inview {
-  animation: fadein 1s ease-out forwards;
+.l-thought__pop--top {
+  animation: floating 2.5s ease-in-out infinite alternate-reverse;
 }
 
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+.l-thought__pop--bottom {
+  animation: floating-bottom 2.5s ease-in-out infinite alternate-reverse;
 }
 
-@keyframes fadein {
+@keyframes floating {
   0% {
-    opacity: 0;
-    translate: 0 -30px;
-  }
-
-  80% {
-    opacity: 1;
+    translate: 0;
   }
 
   100% {
-    opacity: 1;
-    translate: 0;
+    translate: 5px -8px;
   }
 }
 
-@keyframes fadeup {
+@keyframes floating-bottom {
   0% {
-    opacity: 0;
-    translate: 0 50px;
-  }
-
-  80% {
-    opacity: 1;
+    translate: 0;
   }
 
   100% {
-    opacity: 1;
-    translate: 0;
+    translate: 5px 8px;
   }
 }
