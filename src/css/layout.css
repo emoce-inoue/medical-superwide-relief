@@ -91,7 +91,7 @@
 .l-hero__feature-heading {
   display: inline-block;
   width: fit-content;
-  margin: auto;
+  margin-inline: auto;
   font-size: calc(30 / var(--layout-width-sp) * 100vw);
   color: var(--color-orange);
   text-align: center;
@@ -135,7 +135,7 @@
 .l-section__headline-en {
   display: block;
   inline-size: calc(163 / var(--layout-width-sp) * 100%);
-  margin: auto;
+  margin-inline: auto;
   clip-path: circle(0% at 50% 50%);
 }
 
@@ -288,12 +288,8 @@
   position: relative;
 }
 
-.l-check__chart {
+.l-check__chart:not(.l-check__chart--selected) {
   display: none;
-}
-
-.l-check__chart--selected {
-  display: block;
 }
 
 .l-check__question {
@@ -361,7 +357,7 @@
 
 .l-check__answer-arrow {
   inline-size: calc(391 / var(--layout-width-sp) * 100%);
-  margin: auto;
+  margin-inline: auto;
 }
 
 .l-check__answer-text {
@@ -612,7 +608,7 @@
   z-index: var(--front-z-index);
   position: relative;
   inline-size: calc(454 / var(--layout-width-sp) * 100%);
-  margin: auto;
+  margin-inline: auto;
 }
 
 /* faq */
@@ -672,12 +668,12 @@
   line-height: var(--leading-tight);
 }
 
-.l-faq__quesition-close {
+.l-faq__question-close {
   inline-size: calc(32px / 2);
   transition: rotate 0.3s ease;
 }
 
-.l-faq__list-item[open] .l-faq__quesition-close {
+.l-faq__list-item[open] .l-faq__question-close {
   rotate: 45deg;
 }
 
@@ -906,7 +902,7 @@
   .l-bg--left-bottom {
     inset-block-end: 0;
     inset-inline-start: 0;
-    inline-size: min(calc(330 / var(--layout-width-max) * 100%) calc(330 / var(--layout-height) * 100vh));
+    inline-size: min(calc(330 / var(--layout-width-max) * 100%), calc(330 / var(--layout-height) * 100vh));
   }
 
   .l-bg--right-bottom {
@@ -950,7 +946,7 @@
     justify-content: space-between;
     align-items: center;
     inline-size: calc((237 / 547) * 100%);
-    margin: auto;
+    margin-inline: auto;
     transition: opacity 0.3s ease;
   }
 
@@ -1089,7 +1085,7 @@
     inline-size: calc((22 / 695) * 100%);
   }
 
-  .l-faq__quesition-close {
+  .l-faq__question-close {
     inline-size: calc((32 / 695) * 100%);
   }
 
@@ -1135,7 +1131,7 @@
     color: var(--font-white);
   }
 
-  .l-faq__quesition-close:hover {
+  .l-faq__question-close:hover {
     cursor: pointer;
   }
 

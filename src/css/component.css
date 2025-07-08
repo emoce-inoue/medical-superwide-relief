@@ -19,7 +19,7 @@
     translate 0.3s ease;
 }
 
-.js-sticky-cta--fixed {
+.c-cta-sp--fixed {
   translate: -50%;
   opacity: 1;
   visibility: visible;

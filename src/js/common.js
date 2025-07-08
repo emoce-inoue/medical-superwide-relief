@@ -10,7 +10,8 @@ const triggerChart = () => {
       const yesValue = target.dataset.yes;
       const noValue = target.dataset.no;
       const answerNumber = yesValue || noValue;
-      const isYes = !!yesValue;
+      const isYes = Boolean(yesValue);
+      const followUpQuestion = document.querySelector('.l-check__question[data-no-answer="1"]');
 
       if (answerNumber === '1') {
         document.querySelectorAll('.l-check__chart--selected').forEach((targetChart) => {
@@ -21,13 +22,10 @@ const triggerChart = () => {
           targeButton.classList.remove('l-check__button-item--selected');
         });
 
-        const followUpQuestion = document.querySelector('.l-check__question[data-no-answer="1"]');
         if (followUpQuestion) {
           followUpQuestion.classList.add('l-check__question--hidden');
         }
       }
-
-      const followUpQuestion = document.querySelector('.l-check__question[data-no-answer="1"]');
       if (followUpQuestion) {
         if (noValue === '1') {
           followUpQuestion.classList.remove('l-check__question--hidden');
@@ -61,7 +59,7 @@ const triggerChart = () => {
 };
 
 const setCTA = () => {
-  const cta = document.querySelector('.js-sticky-cta');
+  const cta = document.querySelector('.c-cta-sp');
   const logo = document.querySelector('.l-logo');
 
   if (!cta || !logo) {
@@ -70,9 +68,9 @@ const setCTA = () => {
   const fixPosition = logo.getBoundingClientRect().top + window.scrollY;
 
   if (window.scrollY >= fixPosition) {
-    cta.classList.add('js-sticky-cta--fixed');
+    cta.classList.add('c-cta-sp--fixed');
   } else {
-    cta.classList.remove('js-sticky-cta--fixed');
+    cta.classList.remove('c-cta-sp--fixed');
   }
 };
 
