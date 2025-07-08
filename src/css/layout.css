@@ -199,7 +199,7 @@
   inset-block-end: 0;
   inset-inline-end: 0;
   inline-size: calc(446 / var(--layout-width-sp) * 100%);
-  margin-block-start: calc(1067 / var(--layout-width-sp) * 100%);
+  margin-block-start: calc(1009 / var(--layout-width-sp) * 100%);
 }
 
 .l-point__list {
@@ -279,7 +279,7 @@
   font-weight: var(--font-semibold);
   font-size: calc(19 * var(--rem-ratio));
   text-align: center;
-  letter-spacing: var(--tracking-medium);
+  letter-spacing: var(--tracking-normal);
   line-height: var(--leading-snug);
 }
 
@@ -507,6 +507,7 @@
   font-weight: var(--font-light);
   font-size: calc(13 * var(--rem-ratio));
   line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-normal);
 }
 
 .l-thought {
@@ -707,6 +708,14 @@
   padding-block-start: calc(35 / var(--layout-width-sp) * 100%);
 }
 
+.l-contact__attention {
+  inline-size: calc(695 / var(--layout-width-sp) * 100%);
+  margin: calc(52 / var(--layout-width-sp) * 100%) auto 0;
+  font-family: var(--font-normal);
+  font-size: calc(13 * var(--rem-ratio));
+  line-height: var(--leading-normal);
+}
+
 /* footer */
 .l-footer {
   position: relative;
@@ -821,7 +830,7 @@
   padding-inline: calc(35 / var(--layout-width-sp) * 100%);
   font-size: calc(13 * var(--rem-ratio));
   line-height: var(--leading-relaxed);
-  letter-spacing: var(--tracking-medium);
+  letter-spacing: var(--tracking-tight);
 }
 
 .l-footer__logo {

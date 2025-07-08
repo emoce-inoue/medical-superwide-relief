@@ -14,9 +14,9 @@
   opacity: 0;
   visibility: hidden;
   transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease,
-    translate 0.3s ease;
+    opacity 0.5s ease,
+    visibility 0.5s ease,
+    translate 0.5s ease;
 }
 
 .c-cta-sp--fixed {
