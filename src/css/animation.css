@@ -11,8 +11,20 @@
     translate 0.4s ease;
 }
 
-.l-bg {
-  animation: floating 2s ease-in-out infinite alternate-reverse;
+.l-bg--left-top {
+  animation: bg-left-top 2.5s ease-in-out infinite alternate-reverse;
+}
+
+.l-bg--left-bottom {
+  animation: bg-left-bottom 2.5s ease-in-out infinite alternate-reverse;
+}
+
+.l-bg--right-top {
+  animation: bg-right-top 2.5s ease-in-out infinite alternate-reverse;
+}
+
+.l-bg--right-bottom {
+  animation: bg-right-bottom 2.5s ease-in-out infinite alternate-reverse;
 }
 
 .l-thought__pop--top {
@@ -21,6 +33,42 @@
 
 .l-thought__pop--bottom {
   animation: floating-bottom 2.5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes bg-left-top {
+  0% {
+    translate: 0;
+  }
+  100% {
+    translate: -5px -8px;
+  }
+}
+
+@keyframes bg-left-bottom {
+  0% {
+    translate: 0;
+  }
+  100% {
+    translate: -5px 8px;
+  }
+}
+
+@keyframes bg-right-top {
+  0% {
+    translate: 0;
+  }
+  100% {
+    translate: 5px -8px;
+  }
+}
+
+@keyframes bg-right-bottom {
+  0% {
+    translate: 0;
+  }
+  100% {
+    translate: 5px 8px;
+  }
 }
 
 @keyframes floating {
@@ -39,6 +87,6 @@
   }
 
   100% {
-    translate: 5px 8px;
+    translate: 5px -8px;
   }
 }
