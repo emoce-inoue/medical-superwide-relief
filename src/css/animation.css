@@ -39,6 +39,7 @@
   0% {
     translate: 0;
   }
+
   100% {
     translate: -5px -8px;
   }
@@ -48,6 +49,7 @@
   0% {
     translate: 0;
   }
+
   100% {
     translate: -5px 8px;
   }
@@ -57,6 +59,7 @@
   0% {
     translate: 0;
   }
+
   100% {
     translate: 5px -8px;
   }
@@ -66,6 +69,7 @@
   0% {
     translate: 0;
   }
+
   100% {
     translate: 5px 8px;
   }
