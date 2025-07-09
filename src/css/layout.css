@@ -1073,7 +1073,8 @@
 
   .l-point__attention,
   .l-check__attention,
-  .l-plan__attention {
+  .l-plan__attention,
+  .l-contact__attention {
     font-size: min(calc(20 / var(--layout-width-max) * 100vw), calc(20 * var(--rem-ratio)));
   }
 
