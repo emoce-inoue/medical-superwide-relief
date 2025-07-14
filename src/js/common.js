@@ -26,6 +26,7 @@ const triggerChart = () => {
           followUpQuestion.classList.add('l-check__question--hidden');
         }
       }
+
       if (followUpQuestion) {
         if (noValue === '1') {
           followUpQuestion.classList.remove('l-check__question--hidden');
@@ -44,6 +45,11 @@ const triggerChart = () => {
 
       if (targetAnswer) {
         targetAnswer.classList.add('l-check__chart--selected');
+
+        targetAnswer.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+        });
       }
 
       const parentButtons = target.closest('.l-check__button');
@@ -61,13 +67,16 @@ const triggerChart = () => {
 const setCTA = () => {
   const cta = document.querySelector('.c-cta-sp');
   const logo = document.querySelector('.l-logo');
+  const footer = document.querySelector('.l-footer');
 
   if (!cta || !logo) {
     return;
   }
-  const fixPosition = logo.getBoundingClientRect().top + window.scrollY;
+  const startPosition = logo.getBoundingClientRect().top + window.scrollY;
+  const endPosition = footer.getBoundingClientRect().top + window.scrollY;
+  const winTop = window.scrollY + window.innerHeight;
 
-  if (window.scrollY >= fixPosition) {
+  if (window.scrollY >= startPosition && endPosition >= winTop) {
     cta.classList.add('c-cta-sp--fixed');
   } else {
     cta.classList.remove('c-cta-sp--fixed');
