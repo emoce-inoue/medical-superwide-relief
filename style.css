@@ -305,7 +305,39 @@ summary::-webkit-details-marker {
   }
 
   100% {
-    translate: 5px -8px;
+    translate: 5px 8px;
+  }
+}
+
+@keyframes pendulum {
+  0% {
+    opacity: 0;
+    translate: -4px;
+    rotate: 4deg;
+  }
+
+  25% {
+    opacity: 1;
+    translate: 3px;
+    rotate: -3deg;
+  }
+
+  50% {
+    opacity: 1;
+    translate: -2px;
+    rotate: 2deg;
+  }
+
+  75% {
+    opacity: 1;
+    translate: 1px;
+    rotate: -1deg;
+  }
+  
+  100% {
+    opacity: 1;
+    translate: 0;
+    rotate: 0;
   }
 }
 
@@ -576,12 +608,13 @@ summary::-webkit-details-marker {
   display: block;
   inline-size: calc(163 / var(--layout-width-sp) * 100%);
   margin-inline: auto;
-  clip-path: circle(0% at 50% 50%);
+  opacity: 0;
+  translate: -4px;
+  rotate: 4deg;
 }
 
 .l-section__headline.is-inview .l-section__headline-en {
-  clip-path: circle(100% at 50% 50%);
-  transition: clip-path 1s ease-out 0.2s;
+  animation: pendulum 1.3s ease-in-out 0.2s forwards;
 }
 
 .l-section__headline-jp {
@@ -1483,7 +1516,8 @@ summary::-webkit-details-marker {
   }
 
   .l-hero__feature-list-item-strong,
-  .l-check__answer-button-link-text-small {
+  .l-check__answer-button-link-text-small,
+  .l-check__answer-text-sub {
     font-size: min(calc(26 / var(--layout-width-max) * 100vw), calc(26 * (var(--rem-ratio))));
   }
 
@@ -1492,7 +1526,6 @@ summary::-webkit-details-marker {
     font-size: min(calc(38 / var(--layout-width-max) * 100vw), calc(38 * var(--rem-ratio)));
   }
 
-  .l-check__answer-text-sub,
   .l-check__answer-button-link-text--small {
     font-size: min(calc(32 / var(--layout-width-max) * 100vw), calc(32 * var(--rem-ratio)));
   }
