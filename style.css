@@ -337,7 +337,7 @@ summary::-webkit-details-marker {
   100% {
     opacity: 1;
     translate: 0;
-    rotate: 0;
+    rotate: 0deg;
   }
 }
 
